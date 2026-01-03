@@ -9,7 +9,8 @@
 #include "GameObject/GameObject.hpp"
 #include "utils.hpp"
 
-class GameWorld : public WorldBase, public std::enable_shared_from_this<GameWorld> {
+class GameWorld : public WorldBase, public std::enable_shared_from_this<GameWorld>
+{
 public:
     GameWorld();
     virtual ~GameWorld();
@@ -33,18 +34,18 @@ public:
     void addScore() { m_score++; }
     int GetScore() { return m_score; }
 
-private:
-    void SpawnEnemies();
-    void CheckCollisions();
-    void RemoveDeadObjects();
+    // private:
+    //     void SpawnEnemies();
+    //     void CheckCollisions();
+    //     void RemoveDeadObjects();
 
-    std::list<std::shared_ptr<GameObject>> m_gameObjects;
-    std::shared_ptr<GameObject> m_player;
-    int m_clock;
-    int m_score;
-    TextBase *m_scoreText;
-    TextBase *m_gameOverText;
-    bool m_isGameOver;
-};
+    //     std::list<std::shared_ptr<GameObject>> m_gameObjects;
+    //     std::shared_ptr<GameObject> m_player;
+    //     int m_clock;
+    //     int m_score;
+    //     TextBase *m_scoreText;
+    //     TextBase *m_gameOverText;
+    //     bool m_isGameOver;
+    // };
 
-#endif // !GAMEWORLD_HPP__
+    // #endif // !GAMEWORLD_HPP__
